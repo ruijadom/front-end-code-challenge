@@ -7,14 +7,10 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const commonPaths = require('./config/paths');
 
 module.exports = function(_env, argv) {
-  const HOST = argv.HOST;
-  const PORT = argv.PORT;
-
   const isProduction = argv.mode === 'production';
   const isDevelopment = !isProduction;
 
-  argv.HOST = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
-  argv.PORT = commonPaths.PORT;
+  const publicPaths = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
 
   return {
     devtool: isDevelopment && 'cheap-module-source-map',
@@ -23,7 +19,7 @@ module.exports = function(_env, argv) {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'scripts/[name].[contenthash:8].js',
-      publicPath: '/'
+      publicPath: publicPaths
     },
     module: {
       rules: [
@@ -142,8 +138,8 @@ module.exports = function(_env, argv) {
       runtimeChunk: 'single'
     },
     devServer: {
-      host: HOST,
-      port: PORT,
+      host: '0.0.0.0',
+      port: '8081',
       compress: true,
       historyApiFallback: true,
       open: true,
