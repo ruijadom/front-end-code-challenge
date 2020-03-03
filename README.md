@@ -1,6 +1,6 @@
 # Front-end-code-challenge
 
-This repository contains the project requested in the front-end code challenge at Vizzuality.
+This repository contains the project requested in the front-end code challenge at Vizzuality. The objective to complete this challenge is to set up a simple React-based web application and implement the Legend component.
 
 - [Front-end-code-challenge](#front-end-code-challenge)
   - [Scripts](#scripts)
@@ -16,6 +16,7 @@ This repository contains the project requested in the front-end code challenge a
     - [Babel - JavaScript Compiler](#babel---javascript-compiler)
       - [Features](#features-2)
       - [Production optimizations](#production-optimizations)
+    - [TodoList](#todolist)
 
 ---
 
@@ -68,6 +69,14 @@ Webpack configuration is define in **webpack.config.js**
 - **output.path**: Root directory to store output files.
 - **output.filename**: Filename pattern to use for script files.
 - **output.publicPath**: Path to the root directory where the files will be deployed on the web server.
+
+  I use Webpack DefinePlugin() to expose environment variables from the build environment to our application code.
+
+  ```
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development')
+  })
+  ```
 
   ##### Deploy GitHub-Pages
 
@@ -135,6 +144,15 @@ Babel configuration is define in **babel.config.js**
 - **babel-plugin-transform-react-remove-prop-types** removes unnecessary prop-types from production code.
 - **@babel/plugin-transform-react-inline-elements** evaluates React.createElement during compilation and inlines the result.
 - **@babel/plugin-transform-react-constant-elements** extracts static React elements as constants.
+
+---
+
+### TodoList
+
+- [x] Set up Project
+  - [x] Install necessary modules
+  - [x] Configure Babel
+  - [x] Configure Webpack
 
 ---
 
