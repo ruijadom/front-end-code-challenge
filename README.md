@@ -16,6 +16,8 @@ npm install
 
 ### Webpack - Module Blunder
 
+https://webpack.js.org/
+
 Webpack configuration is define in **webpack.config.js**
 
 - **devtool**: Enables source-map generation in development mode.
@@ -25,7 +27,5 @@ Webpack configuration is define in **webpack.config.js**
 - **output.publicPath**: Path to the root directory where the files will be deployed on the web server.
 
 ### Babel - JavaScript Compiler
-
-https://webpack.js.org/
 
 author: Rui Domingues
