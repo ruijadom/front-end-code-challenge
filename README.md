@@ -2,33 +2,46 @@
 
 This repository contains the project requested in the front-end code challenge at Vizzuality.
 
+- [Front-end-code-challenge](#front-end-code-challenge)
+  - [Scripts](#scripts)
+    - [Instalation](#instalation)
+    - [Run Project](#run-project)
+    - [Build for Producion](#build-for-producion)
+    - [Start Production for testing](#start-production-for-testing)
+    - [Build for Producion](#build-for-producion-1)
+  - [Features](#features)
+    - [Webpack - Module Blunder](#webpack---module-blunder)
+    - [Babel - JavaScript Compiler](#babel---javascript-compiler)
+    - [Features](#features-1)
+    - [Production optimizations](#production-optimizations)
 ---
+## Scripts
 
-## Instalation
+### Instalation
 
 ```
 npm install
 ```
 
-## Run Project
+### Run Project
 
 ```
 npm start
 ```
 
-## Build for Producion
+### Build for Producion
 
 ```
 npm run build
 ```
 
-## Start Production for testing
+### Start Production for testing
 
 ```
 npm run start:prod
 ```
 
-## Build for Producion
+### Build for Producion
 
 ```
 npm run deploy
