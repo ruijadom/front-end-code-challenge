@@ -12,8 +12,8 @@ This repository contains the project requested in the front-end code challenge a
   - [Features](#features)
     - [Webpack - Module Blunder](#webpack---module-blunder)
     - [Babel - JavaScript Compiler](#babel---javascript-compiler)
-    - [Features](#features-1)
-    - [Production optimizations](#production-optimizations)
+      - [Features](#features-1)
+      - [Production optimizations](#production-optimizations)
 ---
 ## Scripts
 
@@ -69,7 +69,7 @@ https://babeljs.io/
 
 Babel configuration is define in **babel.config.js**
 
-### Features
+#### Features
 
 - **@babel/preset-env**: Is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms. Takes any target environments you've specified and checks them against its mappings to compile a list of plugins and passes it to Babel.
 - **@babel/preset-react**: Transforms JSX syntax into plain-vanilla JavaScript function calls.
@@ -77,7 +77,7 @@ Babel configuration is define in **babel.config.js**
 - **@babel/plugin-syntax-dynamic-import**: Enables dynamic import() syntax in browsers lacking native Promise support.
 - **@babel/plugin-proposal-class-properties**: Enables support for the public instance field syntax proposal, for writing class-based React components.
 
-### Production optimizations
+#### Production optimizations
 
 - **babel-plugin-transform-react-remove-prop-types** removes unnecessary prop-types from production code.
 - **@babel/plugin-transform-react-inline-elements** evaluates React.createElement during compilation and inlines the result.
