@@ -150,6 +150,7 @@ Babel configuration is define in **babel.config.js**
 ## TodoList
 
 - [x] Set up Project
+
   - [x] Install necessary modules
   - [x] Configure Babel
   - [x] Configure Webpack
@@ -158,8 +159,10 @@ Babel configuration is define in **babel.config.js**
   - [x] Build Dist Folder with code minification:
     - [x] [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) for JavaScript
     - [x] [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin) for CSS
+
 - [ ] Create Legend component (dynamic data)
 
+  - [ ] Load json data
   - [ ] Create 3 diferent legend item components
     - [ ] Basic
       - ![basic](src/assets/images/basic.png)
