@@ -68,7 +68,7 @@ Webpack configuration is define in **webpack.config.js**
 - **output.filename**: Filename pattern to use for script files.
 - **output.publicPath**: Path to the root directory where the files will be deployed on the web server.
 
-  - because de publicPath is diferent in Development environment ('/') and Production environment ('https://ruijadom.github.io/front-end-code-challenge') this will be a dinamic value. This is very important for deploy the application in GitHub-Pages.
+  To run correctly the application in github-pages i need to have publicPath ('/') in Development environment ('/') and ('https://ruijadom.github.io/front-end-code-challenge') in Production environment.
 
   To make it easier to change paths, I have a file with the values ​​that are used in the webpack configuration in **config/paths.js**
 
