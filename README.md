@@ -153,11 +153,24 @@ Babel configuration is define in **babel.config.js**
   - [x] Install necessary modules
   - [x] Configure Babel
   - [x] Configure Webpack
+  - [x] Set up project structure and Webpack config for work with SASS
   - [x] Run Application in Development Mode with source-map
   - [x] Build Dist Folder with code minification:
     - [x] [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) for JavaScript
     - [x] [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin) for CSS
-  - [x] Deploy application in GitHub-Pages
+- [] Create Legend component (dynamic data)
+
+  - [] Create 3 diferent legend item components
+    - [] Basic
+      - ![basic](src/assets/images/basic.png)
+    - [] Cloropleth
+      - ![choropleth](src/assets/images/choropleth.png)
+    - [] Gradient
+      - ![gradient](src/assets/images/gradient.png)
+  - [] Create timeline legend item component
+    - ![timeline](src/assets/images/timeline.png)
+
+- [x] Deploy application in GitHub-Pages
 
 ---
 
