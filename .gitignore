@@ -6,7 +6,6 @@ yarn.lock
 .yarnclean
 .vscode
 
-
 # General
 .DS_Store
 .AppleDouble
