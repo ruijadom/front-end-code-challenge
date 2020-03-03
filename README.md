@@ -87,6 +87,32 @@ Webpack configuration is define in **webpack.config.js**
   };
   ```
 
+  then in webpack configuration with help of conditional operator i pass the correct **publicPath** value for the specific environment
+
+  ```
+    ...
+
+    module.exports = function(_env, argv) {
+
+      const isProduction = argv.mode === 'production';
+      const isDevelopment = !isProduction;
+
+      const publicPaths = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
+
+      return {
+        devtool: isDevelopment && 'cheap-module-source-map',
+        entry: commonPaths.entryPath,
+
+        output: {
+          path: path.resolve(__dirname, 'dist'),
+          filename: 'scripts/[name].[contenthash:8].js',
+          publicPath: publicPaths
+        },
+    ...
+    }
+
+  ```
+
 ### Babel - JavaScript Compiler
 
 https://babeljs.io/
