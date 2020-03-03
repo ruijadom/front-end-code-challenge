@@ -10,6 +10,30 @@ This repository contains the project requested in the front-end code challenge a
 npm install
 ```
 
+## Run Project
+
+```
+npm start
+```
+
+## Build for Producion
+
+```
+npm run build
+```
+
+## Start Production for testing
+
+```
+npm run start:prod
+```
+
+## Build for Producion
+
+```
+npm run deploy
+```
+
 ---
 
 ## Features
