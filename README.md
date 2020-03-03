@@ -153,6 +153,10 @@ Babel configuration is define in **babel.config.js**
   - [x] Install necessary modules
   - [x] Configure Babel
   - [x] Configure Webpack
+  - [x] Run Application in Development Mode with source-map
+  - [x] Build Dist Folder with code minification:
+    - [x] terser-webpack-plugin (https://webpack.js.org/plugins/terser-webpack-plugin/) for JavaScript
+    - [x] optimize-css-assets-webpack-plugin (https://github.com/NMFR/optimize-css-assets-webpack-plugin) for CSS
 
 ---
 
