@@ -15,7 +15,9 @@ This repository contains the project requested in the front-end code challenge a
     - [Babel - JavaScript Compiler](#babel---javascript-compiler)
       - [Features](#features-2)
       - [Production optimizations](#production-optimizations)
+
 ---
+
 ## Scripts
 
 ### Instalation
@@ -65,6 +67,26 @@ Webpack configuration is define in **webpack.config.js**
 - **output.path**: Root directory to store output files.
 - **output.filename**: Filename pattern to use for script files.
 - **output.publicPath**: Path to the root directory where the files will be deployed on the web server.
+
+  - because de publicPath is diferent in Development environment ('/') and Production environment ('https://ruijadom.github.io/front-end-code-challenge') this will be a dinamic value.
+
+  To make it easier to change paths, I have a file with the values ​​that are used in the webpack configuration in **config/paths.js**
+
+  ```
+  const path = require('path');
+  const packageJSON = require('../package.json');
+
+  module.exports = {
+    // Webpack
+    entryPath: path.resolve(__dirname, '../', 'src/index.js'),
+    outputPath: path.resolve(__dirname, '../', 'dist'),
+    templatePath: path.resolve(__dirname, '../', 'src/index.html'),
+    // publicPath
+    publicDevPath: '/',
+    publicProdPath: packageJSON.homepage
+  };
+
+  ```
 
 ### Babel - JavaScript Compiler
 
