@@ -11,8 +11,9 @@ This repository contains the project requested in the front-end code challenge a
     - [Build for Producion](#build-for-producion-1)
   - [Features](#features)
     - [Webpack - Module Blunder](#webpack---module-blunder)
-    - [Babel - JavaScript Compiler](#babel---javascript-compiler)
       - [Features](#features-1)
+    - [Babel - JavaScript Compiler](#babel---javascript-compiler)
+      - [Features](#features-2)
       - [Production optimizations](#production-optimizations)
 ---
 ## Scripts
@@ -56,6 +57,8 @@ npm run deploy
 https://webpack.js.org/
 
 Webpack configuration is define in **webpack.config.js**
+
+#### Features
 
 - **devtool**: Enables source-map generation in development mode.
 - **entry**: Main file of our application.
