@@ -1,7 +1,6 @@
 # Front-end-code-challenge
 
-This repository contains the project requested in the code challenge
-to the position of front-end developer at Vizzuality
+This repository contains the project requested in the front-end code challenge at Vizzuality.
 
 ---
 
