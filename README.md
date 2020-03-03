@@ -158,16 +158,16 @@ Babel configuration is define in **babel.config.js**
   - [x] Build Dist Folder with code minification:
     - [x] [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) for JavaScript
     - [x] [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin) for CSS
-- [] Create Legend component (dynamic data)
+- [ ] Create Legend component (dynamic data)
 
-  - [] Create 3 diferent legend item components
-    - [] Basic
+  - [ ] Create 3 diferent legend item components
+    - [ ] Basic
       - ![basic](src/assets/images/basic.png)
-    - [] Cloropleth
+    - [ ] Cloropleth
       - ![choropleth](src/assets/images/choropleth.png)
-    - [] Gradient
+    - [ ] Gradient
       - ![gradient](src/assets/images/gradient.png)
-  - [] Create timeline legend item component
+  - [ ] Create timeline legend item component
     - ![timeline](src/assets/images/timeline.png)
 
 - [x] Deploy application in GitHub-Pages
