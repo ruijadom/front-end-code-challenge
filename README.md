@@ -12,6 +12,7 @@ This repository contains the project requested in the front-end code challenge a
   - [Features](#features)
     - [Webpack - Module Blunder](#webpack---module-blunder)
       - [Features](#features-1)
+        - [Deploy GitHub-Pages](#deploy-github-pages)
     - [Babel - JavaScript Compiler](#babel---javascript-compiler)
       - [Features](#features-2)
       - [Production optimizations](#production-optimizations)
@@ -68,7 +69,9 @@ Webpack configuration is define in **webpack.config.js**
 - **output.filename**: Filename pattern to use for script files.
 - **output.publicPath**: Path to the root directory where the files will be deployed on the web server.
 
-  To run correctly the application in github-pages i need to have publicPath ('/') in Development environment ('/') and ('https://ruijadom.github.io/front-end-code-challenge') in Production environment.
+  ##### Deploy GitHub-Pages
+
+  To run correctly the application in GitHub-Pages i need to have publicPath ('/') in Development environment and ('https://ruijadom.github.io/front-end-code-challenge') in Production environment.
 
   To make it easier to change paths, I have a file with the values ​​that are used in the webpack configuration in **config/paths.js**
 
