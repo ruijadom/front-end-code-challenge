@@ -3,7 +3,7 @@
 This repository contains the project requested in the front-end code challenge at Vizzuality. The objective to complete this challenge is to set up a simple React-based web application and implement the Legend component.
 
 - [Front-end-code-challenge](#front-end-code-challenge)
-  - [Scripts](#scripts)
+  - [How to use](#how-to-use)
     - [Instalation](#instalation)
     - [Run Project](#run-project)
     - [Build for Producion](#build-for-producion)
@@ -20,7 +20,7 @@ This repository contains the project requested in the front-end code challenge a
 
 ---
 
-## Scripts
+## How to use
 
 ### Instalation
 
