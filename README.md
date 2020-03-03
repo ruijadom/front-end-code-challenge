@@ -4,4 +4,12 @@ This repository contains the project requested in the front-end code challenge a
 
 ---
 
+## Instalation
+
+```
+npm install
+```
+
+---
+
 author: Rui Domingues
