@@ -85,7 +85,6 @@ Webpack configuration is define in **webpack.config.js**
     publicDevPath: '/',
     publicProdPath: packageJSON.homepage
   };
-
   ```
 
 ### Babel - JavaScript Compiler
