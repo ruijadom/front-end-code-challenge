@@ -16,7 +16,7 @@ This repository contains the project requested in the front-end code challenge a
     - [Babel - JavaScript Compiler](#babel---javascript-compiler)
       - [Features](#features-2)
       - [Production optimizations](#production-optimizations)
-    - [TodoList](#todolist)
+  - [TodoList](#todolist)
 
 ---
 
@@ -147,7 +147,7 @@ Babel configuration is define in **babel.config.js**
 
 ---
 
-### TodoList
+## TodoList
 
 - [x] Set up Project
   - [x] Install necessary modules
