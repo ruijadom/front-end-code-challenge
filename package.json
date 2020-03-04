@@ -6,8 +6,10 @@
   "main": "index.js",
   "homepage": "https://ruijadom.github.io/front-end-code-challenge",
   "scripts": {
-    "build": "rimraf dist && webpack --mode production",
     "start": "webpack-dev-server --mode development",
+    "lint": "eslint ./src/index.js ./src/components/*.js",
+    "lint:fix": "eslint --fix ./src/index.js ./src/components/*.js",
+    "build": "rimraf dist && webpack --mode production",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
@@ -53,40 +55,6 @@
     "url-loader": "^2.1.0",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings"
-    ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "env": {
-      "browser": true,
-      "node": true,
-      "es6": true,
-      "jest": true
-    },
-    "rules": {
-      "no-debugger": "off",
-      "no-console": "off",
-      "no-unused-vars": "warn",
-      "react/prop-types": "warn"
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "root": true
   }
 
 }
