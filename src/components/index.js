@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import data from './data.json';
 import LegendList from './legend-list/index';
 
 import './style.scss';
