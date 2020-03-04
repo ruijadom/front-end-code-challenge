@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './style.scss';
+
 function Legend() {
   return (
-    <div>
-      <div>Legend component Card</div>
+    <div className="legend">
+      <div>Legend component Card with Protocol 4</div>
     </div>
   );
 }

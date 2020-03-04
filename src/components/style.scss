@@ -1,7 +1,7 @@
 @import './../sass/index.scss';
 
 .app {
-  background: $background-color;
+  background: darken($background-color, 5%);
   min-height: 100vh;
   flex-direction: column;
   display: flex;
