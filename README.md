@@ -7,7 +7,6 @@ This repository contains the project requested in the front-end code challenge a
     - [Instalation](#instalation)
     - [Run Project](#run-project)
     - [Build for Producion](#build-for-producion)
-    - [Start Production for testing](#start-production-for-testing)
     - [Build for Producion](#build-for-producion-1)
   - [Features](#features)
     - [Webpack - Module Blunder](#webpack---module-blunder)
@@ -38,12 +37,6 @@ npm start
 
 ```
 npm run build
-```
-
-### Start Production for testing
-
-```
-npm run start:prod
 ```
 
 ### Build for Producion
@@ -80,7 +73,15 @@ Webpack configuration is define in **webpack.config.js**
 
   ##### Deploy GitHub-Pages
 
-  To run correctly the application in GitHub-Pages i need to have publicPath ('/') in Development environment and ('https://ruijadom.github.io/front-end-code-challenge') in Production environment.
+  To run correctly the application in GitHub-Pages i use a condition thath check if the host environment variable is define or not.
+
+  ```
+  const isProduction = argv.mode === 'production';
+  const isDevelopment = !isProduction;
+  ...
+  publicPath: isProduction ? argv.host : '/'
+  ...
+  ```
 
   To make it easier to change paths, I have a file with the values ​​that are used in the webpack configuration in **config/paths.js**
 
@@ -92,37 +93,11 @@ Webpack configuration is define in **webpack.config.js**
     // Webpack
     entryPath: path.resolve(__dirname, '../', 'src/index.js'),
     outputPath: path.resolve(__dirname, '../', 'dist'),
-    templatePath: path.resolve(__dirname, '../', 'src/index.html'),
-    // publicPath
-    publicDevPath: '/',
-    publicProdPath: packageJSON.homepage
+    templatePath: path.resolve(__dirname, '../', 'public/index.html'),
+    faviconPath: path.resolve(__dirname, '../', 'public/favicon.ico'),
+    outputScripts: 'scripts',
+    outputStatic: 'static/media/'
   };
-  ```
-
-  then in webpack configuration with help of conditional operator i pass the correct **publicPath** value for the specific environment
-
-  ```
-    ...
-
-    module.exports = function(_env, argv) {
-
-      const isProduction = argv.mode === 'production';
-      const isDevelopment = !isProduction;
-
-      const publicPaths = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
-
-      return {
-        devtool: isDevelopment && 'cheap-module-source-map',
-        entry: commonPaths.entryPath,
-
-        output: {
-          path: path.resolve(__dirname, 'dist'),
-          filename: 'scripts/[name].[contenthash:8].js',
-          publicPath: publicPaths
-        },
-    ...
-    }
-
   ```
 
 ### Babel - JavaScript Compiler
