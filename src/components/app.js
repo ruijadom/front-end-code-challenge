@@ -1,11 +1,13 @@
 import React from 'react';
 import './style.scss';
-import Legend from './legend/Legend';
+import Legend from './legend/index';
 
-const App = () => (
-  <div className="app">
-    <Legend></Legend>
-  </div>
-);
+function App() {
+  return (
+    <div className="app">
+      <Legend></Legend>
+    </div>
+  );
+}
 
 export default App;
