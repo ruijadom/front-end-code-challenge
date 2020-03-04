@@ -10,16 +10,22 @@ module.exports = function(_env, argv) {
   const isProduction = argv.mode === 'production';
   const isDevelopment = !isProduction;
 
-  const PROXY = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
-
   return {
     devtool: isDevelopment && 'cheap-module-source-map',
     entry: commonPaths.entryPath,
 
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'scripts/[name].[contenthash:8].js',
-      publicPath: PROXY
+      path: commonPaths.outputPath,
+      filename: `${commonPaths.outputScripts}/[name].[contenthash:8].js`,
+      publicPath: isProduction ? argv.host : '/'
+    },
+    devServer: {
+      host: '0.0.0.0',
+      port: '8081',
+      compress: true,
+      historyApiFallback: true,
+      open: true,
+      overlay: true
     },
     module: {
       rules: [
@@ -60,7 +66,7 @@ module.exports = function(_env, argv) {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: 'static/media/[name].[hash:8].[ext]'
+              name: `${commonPaths.outputStatic}/[name].[hash:8].[ext]`
             }
           }
         },
@@ -73,7 +79,7 @@ module.exports = function(_env, argv) {
           loader: require.resolve('file-loader'),
           include: [/fonts/],
           options: {
-            name: 'static/media/[name].[hash:8].[ext]'
+            name: `${commonPaths.outputStatic}/[name].[hash:8].[ext]`
           }
         }
       ]
@@ -88,8 +94,8 @@ module.exports = function(_env, argv) {
           chunkFilename: 'assets/css/[name].[contenthash:8].chunk.css'
         }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'public/index.html'),
-        favicon: path.resolve(__dirname, 'public/favicon.ico'),
+        template: commonPaths.templatePath,
+        favicon: commonPaths.faviconPath,
         inject: true
       }),
       new webpack.DefinePlugin({
@@ -136,14 +142,6 @@ module.exports = function(_env, argv) {
         }
       },
       runtimeChunk: 'single'
-    },
-    devServer: {
-      host: '0.0.0.0',
-      port: '8081',
-      compress: true,
-      historyApiFallback: true,
-      open: true,
-      overlay: true
     }
   };
 };
