@@ -1,0 +1,12 @@
+@import './../../sass/index.scss';
+
+.legend-drag {
+  position: absolute;
+  cursor: move;
+  top: 19px;
+  left: 8px;
+
+  svg {
+    fill: $color-dark-1;
+  }
+}
