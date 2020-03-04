@@ -32,14 +32,17 @@ module.exports = function(_env, argv) {
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              cacheDirectory: true,
-              cacheCompression: false,
-              envName: isProduction ? 'production' : 'development'
-            }
-          }
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                cacheDirectory: true,
+                cacheCompression: false,
+                envName: isProduction ? 'production' : 'development'
+              }
+            },
+            'eslint-loader'
+          ]
         },
         {
           test: /\.css$/,
