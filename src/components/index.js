@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import LegendList from './legend-list/index';
+import LegendList from './LegendList/LegendList';
 
 import './style.scss';
 
