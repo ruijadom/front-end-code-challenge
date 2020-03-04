@@ -15,6 +15,7 @@ This repository contains the project requested in the front-end code challenge a
     - [Babel - JavaScript Compiler](#babel---javascript-compiler)
       - [Features](#features-2)
       - [Production optimizations](#production-optimizations)
+    - [Eslint](#eslint)
   - [TodoList](#todolist)
 
 ---
@@ -119,6 +120,10 @@ Babel configuration is define in **babel.config.js**
 - **babel-plugin-transform-react-remove-prop-types** removes unnecessary prop-types from production code.
 - **@babel/plugin-transform-react-inline-elements** evaluates React.createElement during compilation and inlines the result.
 - **@babel/plugin-transform-react-constant-elements** extracts static React elements as constants.
+
+### Eslint
+
+ESLint statically analyzes your code to quickly find problems.
 
 ---
 
