@@ -10,7 +10,7 @@ module.exports = function(_env, argv) {
   const isProduction = argv.mode === 'production';
   const isDevelopment = !isProduction;
 
-  const publicPaths = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
+  const PROXY = isDevelopment ? commonPaths.publicDevPath : commonPaths.publicProdPath;
 
   return {
     devtool: isDevelopment && 'cheap-module-source-map',
@@ -19,7 +19,7 @@ module.exports = function(_env, argv) {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'scripts/[name].[contenthash:8].js',
-      publicPath: publicPaths
+      publicPath: PROXY
     },
     module: {
       rules: [
