@@ -19,7 +19,7 @@ module.exports = function(_env, argv) {
       publicPath: isProduction ? argv.host : '/'
     },
     devServer: {
-      host: '0.0.0.0',
+      host: '127.0.0.1',
       port: '8081',
       compress: true,
       historyApiFallback: true,
