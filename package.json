@@ -13,9 +13,11 @@
     "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
+    "cross-fetch": "^3.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "webpack": "^4.40.2"
+    "webpack": "^4.40.2",
+    "classnames": "^2.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
@@ -29,11 +31,9 @@
     "@babel/runtime": "^7.6.0",
     "@svgr/webpack": "^4.3.2",
     "autoprefixer": "^9.7.4",
-    "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "classnames": "^2.2.6",
     "css-loader": "^3.2.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",

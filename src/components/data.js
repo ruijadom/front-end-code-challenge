@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     id: 'acfc2b99-a06b-4763-83e5-7e14539940b3',
     name: 'Probabilities of Urban Expansion 2030',
@@ -138,4 +138,4 @@ export const data = [
   }
 ];
 
-export default { data };
+export default data;
