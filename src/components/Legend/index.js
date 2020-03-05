@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Spinner from './../Common/Spinner/Spinner';
+import Spinner from '../Common/Spinner/Spinner';
 import LegendItem from './LegendItem';
 import './styles.scss';
 
@@ -10,7 +10,7 @@ class Legend extends Component {
   };
 
   async componentDidMount() {
-    await import('./../data')
+    await import('../data')
       .then(data => {
         this.setState({ legends: data.default, isLoading: false });
       })

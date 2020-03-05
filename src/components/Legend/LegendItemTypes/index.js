@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react';
-//import PropTypes from 'prop-types';
 
-import TypeBasic from './TypeBasic/TypeBasic';
-import TypeCloropleth from './TypeCloropleth/TypeCloropleth';
-import TypeGradient from './TypeGradient/TypeGradient';
-import TypeTimeline from './TypeTimeline/TypeTimeline';
-import './LegendItemTypes.scss';
+import TypeBasic from './TypeBasic';
+import TypeCloropleth from './TypeCloropleth';
+import TypeGradient from './TypeGradient';
+import TypeTimeline from './TypeTimeline';
+import './style.scss';
 
 class LegendItemTypes extends PureComponent {
   render() {

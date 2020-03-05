@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
-import './TypeCloropleth.scss';
+import './style.scss';
 
-class TypeCloropleth extends React.PureComponent {
+class TypeCloropleth extends Component {
   render() {
     return (
       <div>

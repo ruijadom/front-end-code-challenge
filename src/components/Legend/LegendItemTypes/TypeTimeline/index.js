@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
-import './TypeTimeline.scss';
+import './style.scss';
 
-class TypeTimeline extends PureComponent {
+class TypeTimeline extends Component {
   render() {
     return (
       <div>

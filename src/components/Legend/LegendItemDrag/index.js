@@ -1,7 +1,7 @@
 import React from 'react';
 import { SortableHandle } from 'react-sortable-hoc';
 
-import './LegendItemDrag.scss';
+import './style.scss';
 
 const LegendItemDrag = () => <span className="legend-drag"></span>;
 

@@ -1,10 +1,9 @@
 import React from 'react';
-import ArrowDown from '../../Common/Icons/ArrowDown';
-import ShowIcon from '../../Common/Icons/Show';
-import InfoIcon from '../../Common/Icons/Info';
+import ArrowDown from '../../Common/Icons/arrow-down';
+import ShowIcon from '../../Common/Icons/show';
+import InfoIcon from '../../Common/Icons/info';
 import './style.scss';
 
-//const drag = '#AAAAAA';
 const eye = '#393F44';
 const info = '#393F44';
 const down = '#333333';
