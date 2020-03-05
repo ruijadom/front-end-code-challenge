@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Legend from './components/index';
+import App from './components/app';
 
-render(<Legend />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
