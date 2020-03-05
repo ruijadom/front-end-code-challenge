@@ -1,0 +1,16 @@
+@import './../../sass/index.scss';
+
+.legend-header {
+  display: flex;
+}
+
+.legend-title {
+  color: $color-font-title;
+  font: $font-title-style $font-title-weight $font-title-size $font-title;
+  line-height: $font-title-line-height;
+  flex-grow: 1;
+}
+
+.legend-item {
+  padding: 15px;
+}

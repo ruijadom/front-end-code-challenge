@@ -1,0 +1,28 @@
+@import './../sass/index.scss';
+
+.app {
+  background-color: $color-overlay;
+  min-height: 100vh;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    padding: 10px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    padding: 100px;
+  }
+}
+
+.legend-wrapper {
+  margin: 0px auto;
+  background: $color-background;
+  border: 1px solid $color-border;
+  width: 520px;
+}

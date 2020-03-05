@@ -1,0 +1,14 @@
+@import './../../sass/index.scss';
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
