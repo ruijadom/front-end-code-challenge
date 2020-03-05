@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import Drag from './../Drag';
 import Toolbar from './../Toolbar';
 
 import './styles.scss';
@@ -36,10 +38,13 @@ class LegendItem extends Component {
   }
 
   render() {
-    const { name, type } = this.props;
+    const { name, type, isLast } = this.props;
     return (
-      <div className="legend-item">
+      <div className={classnames('legend-item', isLast && 'last')}>
         <div className="legend-header">
+          <div className="legend-drag">
+            <Drag />
+          </div>
           <div className="legend-title">{name}</div>
           <div className="legend-toolbar-wrapper">
             <Toolbar onChangeCollapse={this.toggleOpen} />
@@ -52,6 +57,7 @@ class LegendItem extends Component {
 }
 
 LegendItem.propTypes = {
+  isLast: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(

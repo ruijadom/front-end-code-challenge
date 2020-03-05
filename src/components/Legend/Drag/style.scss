@@ -1,1 +1,9 @@
 @import './../../sass/index.scss';
+
+.drag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 2px;
+}

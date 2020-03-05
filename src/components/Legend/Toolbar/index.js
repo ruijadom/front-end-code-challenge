@@ -17,7 +17,7 @@ function Toolbar() {
       <div className="toolbar-icon">
         <InfoIcon size={14} fill={info} />
       </div>
-      <div className="toolbar-icon">
+      <div className="toolbar-icon arrowDown">
         <ArrowDown size={14} fill={down} />
       </div>
     </div>

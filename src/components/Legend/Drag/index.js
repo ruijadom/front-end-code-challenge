@@ -1,16 +1,15 @@
 import React from 'react';
 import DragIcon from '../../Common/Icons/drag-dots';
+import './style.scss';
 
 const drag = '#AAAAAA';
 
-function index() {
+function DragComp() {
   return (
     <div className="drag">
-      <div className="toolbar-icon">
-        <DragIcon size={14} fill={drag} />
-      </div>
+      <DragIcon size={14} fill={drag} />
     </div>
   );
 }
 
-export default index;
+export default DragComp;

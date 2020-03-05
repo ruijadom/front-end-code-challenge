@@ -5,6 +5,8 @@
 }
 
 .legend-title {
+  align-items: center;
+  display: flex;
   color: $color-font-title;
   font: $font-title-style $font-title-weight $font-title-size $font-title;
   line-height: $font-title-line-height;
@@ -13,4 +15,9 @@
 
 .legend-item {
   padding: 15px;
+  border-bottom: 1px solid $color-border;
+
+  &.last {
+    border-bottom: 0;
+  }
 }

@@ -24,8 +24,8 @@ class Legend extends Component {
     ) : (
       <div className="app">
         <div className="legend-wrapper">
-          {legends.map(({ id, ...rest }) => (
-            <LegendItem key={id} {...rest} />
+          {legends.map(({ id, ...rest }, index) => (
+            <LegendItem key={id} isLast={index + 1 === legends.length} {...rest} />
           ))}
         </div>
       </div>

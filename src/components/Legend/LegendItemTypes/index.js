@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
 import TypeBasic from './TypeBasic';
 import TypeCloropleth from './TypeCloropleth';
@@ -6,7 +6,7 @@ import TypeGradient from './TypeGradient';
 import TypeTimeline from './TypeTimeline';
 import './style.scss';
 
-class LegendItemTypes extends PureComponent {
+class LegendItemTypes extends Component {
   render() {
     return (
       <div>
