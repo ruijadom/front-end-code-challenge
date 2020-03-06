@@ -1,0 +1,24 @@
+@import './../../../sass/index.scss';
+
+.basic-list {
+  padding: 0 17px;
+}
+
+.basic-item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.basic-item-name {
+  font: $font-info-style $font-info-weight $font-info-size $font-info;
+  line-height: $font-info-line-height;
+  color: $color-font-info;
+}
+
+.color-circle {
+  margin-right: 5px;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+}

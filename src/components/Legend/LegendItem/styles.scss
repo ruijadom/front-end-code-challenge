@@ -1,15 +1,17 @@
 @import './../../sass/index.scss';
 
 .legend-header {
+  align-items: center;
   display: flex;
+  height: 13px;
 }
 
 .legend-title {
   align-items: center;
   display: flex;
   color: $color-font-title;
-  font: $font-title-style $font-title-weight $font-title-size $font-title;
-  line-height: $font-title-line-height;
+  font: $font-info-style $font-info-weight $font-info-size $font-info;
+  line-height: $font-info-line-height;
   flex-grow: 1;
 }
 
@@ -19,5 +21,14 @@
 
   &.last {
     border-bottom: 0;
+  }
+}
+
+.legend-content {
+  display: none;
+  padding-top: 15px;
+
+  &.open {
+    display: block;
   }
 }

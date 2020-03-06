@@ -1,4 +1,5 @@
 import React from 'react';
+import { SortableHandle } from 'react-sortable-hoc';
 import DragIcon from '../../Common/Icons/drag-dots';
 import './style.scss';
 
@@ -12,4 +13,4 @@ function DragComp() {
   );
 }
 
-export default DragComp;
+export default SortableHandle(DragComp);

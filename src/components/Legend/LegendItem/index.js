@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Drag from './../Drag';
 import Toolbar from './../Toolbar';
-
+import { TypeBasic, TypeTimeline, TypeGradient, TypeCloropleth } from '../LegendItemTypes';
 import './styles.scss';
 
 const TIMELINE = 'timeline';
@@ -20,18 +20,21 @@ class LegendItem extends Component {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen
     }));
+    console.log(this.state.isOpen);
   };
 
-  renderContent(type) {
+  renderContent() {
+    const { type, items } = this.props;
+
     switch (type) {
       case BASIC:
-        return <div>basic</div>;
+        return <TypeBasic items={items} />;
       case TIMELINE:
-        return <div>timeline</div>;
+        return <TypeTimeline items={items} />;
       case GRADIENT:
-        return <div>gradient</div>;
+        return <TypeGradient items={items} />;
       case CHOROPLETH:
-        return <div>choropleth</div>;
+        return <TypeCloropleth items={items} />;
       default:
         return null;
     }
@@ -39,6 +42,8 @@ class LegendItem extends Component {
 
   render() {
     const { name, type, isLast } = this.props;
+    const { isOpen } = this.state;
+
     return (
       <div className={classnames('legend-item', isLast && 'last')}>
         <div className="legend-header">
@@ -46,11 +51,9 @@ class LegendItem extends Component {
             <Drag />
           </div>
           <div className="legend-title">{name}</div>
-          <div className="legend-toolbar-wrapper">
-            <Toolbar onChangeCollapse={this.toggleOpen} />
-          </div>
+          <Toolbar onChangeCollapse={this.toggleOpen} isOpen={isOpen} />
         </div>
-        <div>{this.renderContent(type)}</div>
+        <div className={classnames('legend-content', isOpen && 'open')}>{this.renderContent(type)}</div>
       </div>
     );
   }

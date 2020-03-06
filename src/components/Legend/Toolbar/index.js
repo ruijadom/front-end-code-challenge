@@ -1,4 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+
 import ArrowDown from '../../Common/Icons/arrow-down';
 import ShowIcon from '../../Common/Icons/show';
 import InfoIcon from '../../Common/Icons/info';
@@ -8,20 +11,24 @@ const eye = '#393F44';
 const info = '#393F44';
 const down = '#333333';
 
-function Toolbar() {
+function Toolbar({ isOpen, onChangeCollapse }) {
   return (
     <div className="toolbar">
-      <div className="toolbar-icon">
-        <ShowIcon size={14} fill={eye} />
-      </div>
-      <div className="toolbar-icon">
-        <InfoIcon size={14} fill={info} />
-      </div>
-      <div className="toolbar-icon arrowDown">
-        <ArrowDown size={14} fill={down} />
-      </div>
+      <ShowIcon className="toolbar-icon" size={14} fill={eye} />
+      <InfoIcon className="toolbar-icon" size={14} fill={info} />
+      <ArrowDown
+        className={classnames('toolbar-icon', 'arrow-icon', isOpen && 'open')}
+        size={14}
+        fill={down}
+        onClick={onChangeCollapse}
+      />
     </div>
   );
 }
+
+Toolbar.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onChangeCollapse: PropTypes.func.isRequired
+};
 
 export default Toolbar;
