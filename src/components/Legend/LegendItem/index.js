@@ -23,7 +23,7 @@ class LegendItem extends Component {
   };
 
   renderContent() {
-    const { type, items } = this.props;
+    const { type, items, timeline } = this.props;
 
     switch (type) {
       case BASIC:
@@ -33,7 +33,7 @@ class LegendItem extends Component {
       case GRADIENT:
         return <TypeGradient items={items} />;
       case TIMELINE:
-        return <TypeTimeline items={items} />;
+        return <TypeTimeline timeline={timeline} />;
       default:
         return null;
     }
@@ -68,7 +68,14 @@ LegendItem.propTypes = {
       color: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired
     })
-  )
+  ),
+  timeline: PropTypes.shape({
+    step: PropTypes.number.isRequired,
+    speed: PropTypes.number.isRequired,
+    dateFormat: PropTypes.string.isRequired,
+    maxDate: PropTypes.string.isRequired,
+    minDate: PropTypes.string.isRequired
+  })
 };
 
 export default LegendItem;

@@ -4,7 +4,6 @@ import './style.scss';
 
 const TypeGradient = ({ items }) => {
   const gradient = items.map(item => item.color);
-  console.log(gradient);
 
   return (
     <>
