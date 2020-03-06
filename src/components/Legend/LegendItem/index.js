@@ -20,7 +20,6 @@ class LegendItem extends Component {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen
     }));
-    console.log(this.state.isOpen);
   };
 
   renderContent() {
@@ -53,6 +52,7 @@ class LegendItem extends Component {
           <div className="legend-title">{name}</div>
           <Toolbar onChangeCollapse={this.toggleOpen} isOpen={isOpen} />
         </div>
+
         <div className={classnames('legend-content', isOpen && 'open')}>{this.renderContent(type)}</div>
       </div>
     );

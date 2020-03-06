@@ -15,23 +15,16 @@
 
 .gradient-bar-range {
   flex: 1 1 auto;
+  display: block;
+  height: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .gradient-item-name {
   font: $font-info-style $font-info-weight $font-info-size $font-info;
   line-height: $font-info-line-height;
   color: $color-font-info;
-  &:first-child {
-    .name {
-      text-align: left;
-    }
-  }
-
-  &:last-child {
-    .name {
-      text-align: right;
-    }
-  }
 }
 
 .gradient {
