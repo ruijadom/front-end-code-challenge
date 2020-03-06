@@ -7,23 +7,24 @@ const TypeGradient = ({ items }) => {
   console.log(gradient);
 
   return (
-    <div className="gradient">
-      <ul className="gradient-item">
-        {items.map(({ color, name }, index) => (
-          <li key={index} className="gradient-bar-range">
+    <>
+      <div
+        className="gradient"
+        style={{
+          backgroundImage: `linear-gradient(to right, ${gradient.join(',')})`
+        }}
+      ></div>
+
+      <div className="gradient-info">
+        {items.map(({ name }, index) => (
+          <div key={index} className="gradient-info-range">
             <div>
-              <div
-                className="gradient"
-                style={{
-                  backgroundImage: `linear-gradient(to right, ${gradient.join(',')})`
-                }}
-              ></div>
-              <div className="gradient-item-name">{name}</div>
+              <div className="gradient-info-name">{name}</div>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </>
   );
 };
 

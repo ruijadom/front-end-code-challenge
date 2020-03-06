@@ -2,10 +2,15 @@
 
 .gradient {
   padding: 0px;
+  height: 7px;
+  margin-bottom: 5px;
 }
 
-.gradient-item {
-  list-style: none;
+.gradient-bar {
+  margin-top: 10px;
+}
+
+.gradient-info {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -13,21 +18,19 @@
   margin-top: 10px;
 }
 
-.gradient-bar-range {
+.gradient-info-range {
   flex: 1 1 auto;
-  display: block;
-  height: 5px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  &:nth-child(1) {
+    text-align: left;
+  }
+
+  &:last-child {
+    text-align: right;
+  }
 }
 
-.gradient-item-name {
+.gradient-info-name {
   font: $font-info-style $font-info-weight $font-info-size $font-info;
   line-height: $font-info-line-height;
   color: $color-font-info;
-}
-
-.gradient {
-  height: 7px;
-  margin-bottom: 5px;
 }
