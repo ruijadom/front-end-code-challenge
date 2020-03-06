@@ -142,11 +142,11 @@ ESLint statically analyzes your code to quickly find problems.
 
 - [ ] Create Legend component (dynamic data)
 
-  - [ ] Load json data
+  - [x] Load json data
   - [ ] Create 3 diferent legend item components
-    - [ ] Basic
+    - [x] Basic
       - ![basic](src/assets/images/basic.png)
-    - [ ] Cloropleth
+    - [x] Cloropleth
       - ![choropleth](src/assets/images/choropleth.png)
     - [ ] Gradient
       - ![gradient](src/assets/images/gradient.png)

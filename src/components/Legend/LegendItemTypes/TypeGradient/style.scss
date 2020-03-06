@@ -1,0 +1,40 @@
+@import './../../../sass/index.scss';
+
+.gradient {
+  padding: 0px;
+}
+
+.gradient-item {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.gradient-bar-range {
+  flex: 1 1 auto;
+}
+
+.gradient-item-name {
+  font: $font-info-style $font-info-weight $font-info-size $font-info;
+  line-height: $font-info-line-height;
+  color: $color-font-info;
+  &:first-child {
+    .name {
+      text-align: left;
+    }
+  }
+
+  &:last-child {
+    .name {
+      text-align: right;
+    }
+  }
+}
+
+.gradient {
+  height: 7px;
+  margin-bottom: 5px;
+}

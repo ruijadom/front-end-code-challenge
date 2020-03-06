@@ -17,7 +17,7 @@ function Toolbar({ isOpen, onChangeCollapse }) {
       <ShowIcon className="toolbar-icon" size={14} fill={eye} />
       <InfoIcon className="toolbar-icon" size={14} fill={info} />
       <ArrowDown
-        className={classnames('toolbar-icon', 'arrow-icon', isOpen && 'open')}
+        className={classnames('toolbar-icon', 'arrow-icon', 'rotate', isOpen && 'open')}
         size={14}
         fill={down}
         onClick={onChangeCollapse}
