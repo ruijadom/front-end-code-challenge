@@ -4,13 +4,13 @@ import './style.scss';
 
 const TypeCloropleth = ({ items }) => {
   return (
-    <div className="basic-list">
-      <div className="basic-item">
+    <div className="cloropleth">
+      <div className="cloropleth-item">
         {items.map(({ color, name }, index) => (
-          <div key={index} className="basic-item-range">
+          <div key={index} className="cloropleth-bar-range">
             <div>
-              <div className="color-bar" style={{ backgroundColor: color }}></div>
-              <div className="basic-item-name">{name}</div>
+              <div className="cloropleth" style={{ backgroundColor: color }}></div>
+              <div className="cloropleth-item-name">{name}</div>
             </div>
           </div>
         ))}
