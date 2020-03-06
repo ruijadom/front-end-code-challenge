@@ -6,7 +6,10 @@
 
 .cloropleth-item {
   display: flex;
-  margin-bottom: 4px;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100%;
+  margin-top: 10px;
 }
 
 .cloropleth-bar-range {
@@ -14,13 +17,13 @@
   text-align: center;
 }
 
-.cloropleth {
-  height: 7px;
-  margin-bottom: 5px;
-}
-
 .cloropleth-item-name {
   font: $font-info-style $font-info-weight $font-info-size $font-info;
   line-height: $font-info-line-height;
   color: $color-font-info;
+}
+
+.cloropleth {
+  height: 7px;
+  margin-bottom: 5px;
 }
