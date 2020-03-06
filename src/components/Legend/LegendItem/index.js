@@ -6,10 +6,10 @@ import Toolbar from './../Toolbar';
 import { TypeBasic, TypeTimeline, TypeGradient, TypeCloropleth } from '../LegendItemTypes';
 import './styles.scss';
 
-const TIMELINE = 'timeline';
-const GRADIENT = 'gradient';
-const CHOROPLETH = 'choropleth';
 const BASIC = 'basic';
+const CHOROPLETH = 'choropleth';
+const GRADIENT = 'gradient';
+const TIMELINE = 'timeline';
 
 class LegendItem extends Component {
   state = {
@@ -29,12 +29,12 @@ class LegendItem extends Component {
     switch (type) {
       case BASIC:
         return <TypeBasic items={items} />;
-      case TIMELINE:
-        return <TypeTimeline items={items} />;
-      case GRADIENT:
-        return <TypeGradient items={items} />;
       case CHOROPLETH:
         return <TypeCloropleth items={items} />;
+      case GRADIENT:
+        return <TypeGradient items={items} />;
+      case TIMELINE:
+        return <TypeTimeline items={items} />;
       default:
         return null;
     }

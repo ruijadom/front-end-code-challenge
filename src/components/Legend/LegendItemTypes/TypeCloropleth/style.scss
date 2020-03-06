@@ -1,0 +1,26 @@
+@import './../../../sass/index.scss';
+
+.basic-list {
+  padding: 0px 0px 0px 17px;
+}
+
+.basic-item {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.basic-item-range {
+  flex: 1 0 auto;
+  text-align: center;
+}
+
+.basic-item-name {
+  font: $font-info-style $font-info-weight $font-info-size $font-info;
+  line-height: $font-info-line-height;
+  color: $color-font-info;
+}
+
+.color-bar {
+  height: 7px;
+  margin-bottom: 5px;
+}
