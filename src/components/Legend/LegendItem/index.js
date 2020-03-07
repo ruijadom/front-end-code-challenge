@@ -66,7 +66,7 @@ LegendItem.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
+      name: PropTypes.string
     })
   ),
   timeline: PropTypes.shape({
