@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
-import Spinner from '../Common/Spinner/Spinner';
+import Spinner from '../Shared/Spinner/Spinner';
 import LegendItem from './LegendItem';
 import './styles.scss';
 
