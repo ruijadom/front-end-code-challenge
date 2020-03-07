@@ -10,9 +10,12 @@
   align-items: center;
   display: flex;
   color: $color-font-title;
-  font: $font-info-style $font-info-weight $font-info-size $font-info;
-  line-height: $font-info-line-height;
+  font: $font-title-style $font-title-weight $font-title-size-md $font-title;
+  line-height: $font-title-line-height;
   flex-grow: 1;
+  @media (max-width: 768px) {
+    font-size: $font-title-size-xs;
+  }
 }
 
 .legend-item {

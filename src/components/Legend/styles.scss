@@ -1,18 +1,15 @@
 @import './../sass/index.scss';
 
 .app {
-  background: $color-overlay;
   display: flex;
+  background: $color-overlay;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
 }
 
 .legend-wrapper {
-  display: flex;
-  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 84px;
   width: 520px;
   background: $color-background;
   border: 1px solid $color-border;

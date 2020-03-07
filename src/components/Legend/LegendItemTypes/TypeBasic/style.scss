@@ -11,9 +11,12 @@
 }
 
 .basic-item-name {
-  font: $font-info-style $font-info-weight $font-info-size $font-info;
+  font: $font-info-style $font-info-weight $font-info-size-md $font-info;
   line-height: $font-info-line-height;
   color: $color-font-info;
+  @media (max-width: 768px) {
+    font-size: $font-info-size-xs;
+  }
 }
 
 .color-circle {
