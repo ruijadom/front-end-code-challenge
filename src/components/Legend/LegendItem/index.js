@@ -17,18 +17,22 @@ class LegendItem extends Component {
     isOpen: true
   };
 
-  showInfo = () => {};
+  showInfo = () => {
+    console.log(`showModal`);
+  };
 
   toogleVisibility = () => {
     this.setState(prevState => ({
       isVisible: !prevState.isVisible
     }));
+    console.log(`isVisible ${this.state.isVisible}`);
   };
 
   toggleOpen = () => {
     this.setState(prevState => ({
       isOpen: !prevState.isOpen
     }));
+    console.log(`isOpen ${this.state.isOpen}`);
   };
 
   renderContent() {
