@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 const TypeTimeline = ({ timeline }) => {
-  console.log(timeline);
-
   return (
     <div className="timeline-list">
       <div className="timeline-item-name">

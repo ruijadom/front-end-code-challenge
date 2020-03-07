@@ -13,7 +13,16 @@ const TIMELINE = 'timeline';
 
 class LegendItem extends Component {
   state = {
+    isVisible: true,
     isOpen: true
+  };
+
+  showInfo = () => {};
+
+  toogleVisibility = () => {
+    this.setState(prevState => ({
+      isVisible: !prevState.isVisible
+    }));
   };
 
   toggleOpen = () => {
@@ -41,7 +50,7 @@ class LegendItem extends Component {
 
   render() {
     const { name, type, isLast } = this.props;
-    const { isOpen } = this.state;
+    const { isOpen, isVisible } = this.state;
 
     return (
       <div className={classnames('legend-item', isLast && 'last')}>
@@ -50,10 +59,18 @@ class LegendItem extends Component {
             <Drag />
           </div>
           <div className="legend-title">{name}</div>
-          <Toolbar onChangeCollapse={this.toggleOpen} isOpen={isOpen} />
+          <Toolbar
+            onChangeVisibility={this.toogleVisibility}
+            onChangeInfo={this.showInfo}
+            onChangeCollapse={this.toggleOpen}
+            isOpen={isOpen}
+            isVisible={isVisible}
+          />
         </div>
 
-        <div className={classnames('legend-content', isOpen && 'open')}>{this.renderContent(type)}</div>
+        <div className={classnames('legend-content', isOpen && 'open')}>
+          {this.renderContent(type)}
+        </div>
       </div>
     );
   }
@@ -61,6 +78,7 @@ class LegendItem extends Component {
 
 LegendItem.propTypes = {
   isLast: PropTypes.bool.isRequired,
+  isVisible: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
