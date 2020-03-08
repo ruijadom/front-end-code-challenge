@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
 import ArrowDown from '../../Common/Icons/arrow-down';
 import ShowIcon from '../../Common/Icons/show';
 import HideIcon from '../../Common/Icons/hide';
 import InfoIcon from '../../Common/Icons/info';
+
 import './style.scss';
 
 const eye = '#393F44';
@@ -30,7 +30,6 @@ function Toolbar({ onChangeVisibility, onChangeInfo, onChangeCollapse, isCollaps
           onClick={onChangeVisibility}
         />
       )}
-
       <InfoIcon className="toolbar-icon" size={14} fill={info} onClick={onChangeInfo} />
 
       <ArrowDown

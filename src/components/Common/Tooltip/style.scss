@@ -1,1 +1,10 @@
 @import './../../sass/index.scss';
+
+.react-tooltip-1 {
+  opacity: 0;
+  transform: translateY(10px);
+  &.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
