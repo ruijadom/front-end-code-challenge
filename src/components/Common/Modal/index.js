@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HtmlParse from 'html-react-parser';
 import PropTypes from 'prop-types';
-import CrossIcon from './../../Common/Icons/cross';
+import CrossIcon from '../../Common/Icons/cross';
 import './style.scss';
 
 const cross = '#393f44';
