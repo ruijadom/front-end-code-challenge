@@ -14,7 +14,6 @@ export default class Modal extends React.Component {
     console.log(props);
   }
   onClose = e => {
-    console.log('BUTTON CLICKED');
     e.stopPropagation();
     this.props.onClose && this.props.onClose(e);
   };
