@@ -8,11 +8,12 @@
 .timeline-item-date {
   display: flex;
   justify-content: space-between;
-  font: $font-info-style $font-info-weight $font-info-size-md $font-info;
-  line-height: $font-info-line-height;
-  color: $color-font-info;
+  font: $font-timeline-style $font-timeline-weight $font-timeline-size-md $font-timeline;
+  line-height: $font-timeline-line-height;
+  color: $color-font-timeline;
+  margin-top: 7px;
   @media (max-width: 768px) {
-    font-size: $font-info-size-xs;
+    font-size: $font-timeline-size-xs;
   }
 }
 

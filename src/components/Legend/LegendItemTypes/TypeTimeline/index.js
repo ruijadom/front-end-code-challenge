@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'rc-slider';
 import PropTypes from 'prop-types';
+import { convertToYear } from '../../../Common/Dates/index';
 const Range = Slider.Range;
 import './style.scss';
 
@@ -16,22 +17,21 @@ class TypeTimeline extends React.Component {
     };
   }
 
+  componentDidMount() {}
+
   render() {
     const { timeline } = this.state;
+    const startDate = convertToYear(timeline.minDate);
+    const endDate = convertToYear(timeline.maxDate);
 
     return (
       <div className="timeline">
         <div className="timeline-item-name">
           <Range allowCross={false} defaultValue={[0, 20]} onChange={log} reverse />
           <div className="timeline-item-date">
-            <div className="timeline-minDate">{timeline.minDate}</div>
-            <div className="timeline-maxDate">{timeline.maxDate}</div>
+            <div className="timeline-minDate">{startDate}</div>
+            <div className="timeline-maxDate">{endDate}</div>
           </div>
-          <div>step: {timeline.step}</div>
-          <div>speed: {timeline.speed}</div>
-          <div>dateFormate: {timeline.dateFormat}</div>
-          <div>minDate: {timeline.minDate}</div>
-          <div>maxDate: {timeline.maxDate}</div>
         </div>
       </div>
     );
