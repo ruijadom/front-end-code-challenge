@@ -162,7 +162,7 @@ ESLint statically analyzes your code to quickly find problems.
 
     - ![timeline](src/assets/images/timeline.png)
 
-  - [x] Create Modal Component
+  - [x] Create Modal Component - Portals
 
 - [x] Deploy application in GitHub-Pages
 
