@@ -12,7 +12,7 @@ const eye = '#393F44';
 const info = '#393F44';
 const down = '#333333';
 
-function Toolbar({ onChangeVisibility, onChangeInfo, onChangeCollapse, isOpen, isVisible }) {
+function Toolbar({ onChangeVisibility, onChangeInfo, onChangeCollapse, isCollapse, isVisible }) {
   return (
     <div className="toolbar">
       {isVisible ? (
@@ -34,7 +34,7 @@ function Toolbar({ onChangeVisibility, onChangeInfo, onChangeCollapse, isOpen, i
       <InfoIcon className="toolbar-icon" size={14} fill={info} onClick={onChangeInfo} />
 
       <ArrowDown
-        className={classnames('toolbar-icon', 'arrow-icon', 'rotate', isOpen && 'open')}
+        className={classnames('toolbar-icon', 'arrow-icon', 'rotate', isCollapse && 'open')}
         size={14}
         fill={down}
         onClick={onChangeCollapse}
@@ -44,7 +44,7 @@ function Toolbar({ onChangeVisibility, onChangeInfo, onChangeCollapse, isOpen, i
 }
 
 Toolbar.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
+  isCollapse: PropTypes.bool.isRequired,
   isVisible: PropTypes.bool.isRequired,
   onChangeVisibility: PropTypes.func.isRequired,
   onChangeInfo: PropTypes.func.isRequired,

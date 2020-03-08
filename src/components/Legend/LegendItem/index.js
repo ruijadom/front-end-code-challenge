@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import Drag from './../Drag';
 import Toolbar from './../Toolbar';
 import { TypeBasic, TypeTimeline, TypeGradient, TypeCloropleth } from '../LegendItemTypes';
+import Modal from './../../Shared/Modal';
 import './styles.scss';
 
 const BASIC = 'basic';
@@ -14,11 +15,17 @@ const TIMELINE = 'timeline';
 class LegendItem extends Component {
   state = {
     isVisible: true,
-    isOpen: true
+    isCollapse: true,
+    isModalOpen: false
   };
 
-  showInfo = () => {
-    console.log(`showModal`);
+  toogleInfo = () => {
+    this.setState(prevState => ({
+      isModalOpen: !prevState.isModalOpen
+    }));
+    const { isModalOpen } = this.state;
+
+    console.log(`isModalOpen ${isModalOpen}`);
   };
 
   toogleVisibility = () => {
@@ -30,9 +37,8 @@ class LegendItem extends Component {
 
   toggleOpen = () => {
     this.setState(prevState => ({
-      isOpen: !prevState.isOpen
+      isCollapse: !prevState.isCollapse
     }));
-    console.log(`isOpen ${this.state.isOpen}`);
   };
 
   renderContent() {
@@ -53,8 +59,8 @@ class LegendItem extends Component {
   }
 
   render() {
-    const { name, type, isLast } = this.props;
-    const { isOpen, isVisible } = this.state;
+    const { name, type, isLast, description } = this.props;
+    const { isCollapse, isVisible, isModalOpen } = this.state;
 
     return (
       <div className={classnames('legend-item', isLast && 'last')}>
@@ -65,16 +71,17 @@ class LegendItem extends Component {
           <div className="legend-title">{name}</div>
           <Toolbar
             onChangeVisibility={this.toogleVisibility}
-            onChangeInfo={this.showInfo}
+            onChangeInfo={this.toogleInfo}
             onChangeCollapse={this.toggleOpen}
-            isOpen={isOpen}
+            isCollapse={isCollapse}
             isVisible={isVisible}
           />
         </div>
 
-        <div className={classnames('legend-content', isOpen && 'open')}>
+        <div className={classnames('legend-content', isCollapse && 'open')}>
           {this.renderContent(type)}
         </div>
+        <Modal onClose={this.toogleInfo} show={isModalOpen} description={description}></Modal>
       </div>
     );
   }
@@ -82,9 +89,10 @@ class LegendItem extends Component {
 
 LegendItem.propTypes = {
   isLast: PropTypes.bool.isRequired,
-  isVisible: PropTypes.bool.isRequired,
+  isVisible: PropTypes.bool,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       color: PropTypes.string.isRequired,
