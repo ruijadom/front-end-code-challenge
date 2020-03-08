@@ -58,9 +58,9 @@
   cursor: -webkit-grab;
   margin-top: -5px;
   cursor: grab;
-  border-radius: 50%;
+  border-radius: 5.5px;
   border: solid 2px $color-timeline-slider;
-  background-color: #fff;
+  background-color: $color-timeline-slider;
   -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
