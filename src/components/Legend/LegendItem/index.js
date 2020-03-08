@@ -29,7 +29,6 @@ class LegendItem extends Component {
     this.setState(prevState => ({
       isVisible: !prevState.isVisible
     }));
-    console.log(`isVisible ${this.state.isVisible}`);
   };
 
   toggleOpen = () => {
