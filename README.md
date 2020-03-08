@@ -143,15 +143,26 @@ ESLint statically analyzes your code to quickly find problems.
 - [ ] Create Legend component (dynamic data)
 
   - [x] Load json data
-  - [ ] Create 3 diferent legend item components
+
+  - [x] Create 3 diferent legend item components
+
     - [x] Basic
       - ![basic](src/assets/images/basic.png)
+        - Extra [] - persist text write via placeholder
     - [x] Cloropleth
       - ![choropleth](src/assets/images/choropleth.png)
-    - [ ] Gradient
+    - [x] Gradient
       - ![gradient](src/assets/images/gradient.png)
-  - [ ] Create timeline legend item component
+
+  - [x] Create Icons SVG as component
+  - [x] Create Toolbar component
+  - [x] Create Tooltip component
+
+    - Extra: [ ] create Timeline legend item component
+
     - ![timeline](src/assets/images/timeline.png)
+
+  - [x] Create Modal Component
 
 - [x] Deploy application in GitHub-Pages
 
