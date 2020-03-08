@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Drag from './../Drag';
 import Toolbar from './../Toolbar';
 import { TypeBasic, TypeTimeline, TypeGradient, TypeCloropleth } from '../LegendItemTypes';
-import Modal from './../../Shared/Modal';
+import Modal from './../../Common/Modal';
 import './styles.scss';
 
 const BASIC = 'basic';

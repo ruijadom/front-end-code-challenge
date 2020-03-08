@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import ArrowDown from '../../Shared/Icons/arrow-down';
-import ShowIcon from '../../Shared/Icons/show';
-import HideIcon from '../../Shared/Icons/hide';
-import InfoIcon from '../../Shared/Icons/info';
+import ArrowDown from '../../Common/Icons/arrow-down';
+import ShowIcon from '../../Common/Icons/show';
+import HideIcon from '../../Common/Icons/hide';
+import InfoIcon from '../../Common/Icons/info';
 import './style.scss';
 
 const eye = '#393F44';
