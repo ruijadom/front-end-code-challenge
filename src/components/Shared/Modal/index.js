@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactHtmlParser from 'react-html-parser';
+import HtmlParse from 'html-react-parser';
 import PropTypes from 'prop-types';
+import CrossIcon from './../../Shared/Icons/cross';
 import './style.scss';
+
+const cross = '#393f44';
 
 // Get div for appaendChild and removeChild
 const modalRoot = document.getElementById('modal-root');
@@ -40,16 +43,15 @@ export default class Modal extends React.Component {
       <div className="backdrop">
         <div className="modal">
           <div className="modal-header">
-            <button
-              className="modal-close-btn "
+            <CrossIcon
+              size={14}
+              fill={cross}
               onClick={e => {
                 this.onClose(e);
               }}
-            >
-              x
-            </button>
+            />
           </div>
-          <div className="modal-content">{ReactHtmlParser(this.props.description)}</div>
+          <div className="modal-content">{HtmlParse(this.props.description)}</div>
         </div>
       </div>
     );

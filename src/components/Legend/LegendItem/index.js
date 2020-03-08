@@ -23,9 +23,6 @@ class LegendItem extends Component {
     this.setState(prevState => ({
       isModalOpen: !prevState.isModalOpen
     }));
-    const { isModalOpen } = this.state;
-
-    console.log(`isModalOpen ${isModalOpen}`);
   };
 
   toogleVisibility = () => {

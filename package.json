@@ -17,7 +17,7 @@
     "cross-fetch": "^3.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.13.0",
-    "react-html-parser": "^2.0.2",
+    "html-react-parser": "^0.10.1",
     "webpack": "^4.40.2"
   },
   "devDependencies": {
