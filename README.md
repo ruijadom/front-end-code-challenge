@@ -161,8 +161,6 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] Create Toolbar component
   - [x] Create Tooltip component
 
-    - ![timeline](src/assets/images/timeline.png)
-
   - [x] Create Modal Component - Portals
 
 - [x] Extra goals
@@ -170,6 +168,7 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] 1. Persist text in first layer - Persiste text in localstorage.
   - [x] 2. Sorte the layers.
   - [x] 3. Timeline - need more time to finished
+    - ![timeline](src/assets/images/timeline.png)
 
 - [x] Deploy application in GitHub-Pages
 
