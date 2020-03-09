@@ -149,7 +149,6 @@ ESLint statically analyzes your code to quickly find problems.
     - [x] Basic
 
       - ![basic](src/assets/images/basic.png)
-        - Extra [ ] - persist text write via placeholder
 
     - [x] Cloropleth
       - ![choropleth](src/assets/images/choropleth.png)
