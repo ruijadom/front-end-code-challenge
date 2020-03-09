@@ -161,8 +161,6 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] Create Toolbar component
   - [x] Create Tooltip component
 
-    - Extra: [x] create Timeline legend item component
-
     - ![timeline](src/assets/images/timeline.png)
 
   - [x] Create Modal Component - Portals
@@ -177,6 +175,6 @@ ESLint statically analyzes your code to quickly find problems.
 
 ---
 
-Thanks for your time
+Thanks for your time :)
 
 author: Rui Domingues
