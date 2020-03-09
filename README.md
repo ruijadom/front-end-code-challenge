@@ -2,7 +2,7 @@
 
 This repository contains the project requested in the front-end code challenge at Vizzuality. The objective to complete this challenge is to set up a simple React-based web application and implement the Legend component.
 
-Visit [[terser-webpack-plugin](https://ruijadom.github.io/front-end-code-challenge/)
+Production in [https://ruijadom.github.io/front-end-code-challenge/](https://ruijadom.github.io/front-end-code-challenge/)
 
 - [Front-end-code-challenge](#front-end-code-challenge)
   - [How to use](#how-to-use)
