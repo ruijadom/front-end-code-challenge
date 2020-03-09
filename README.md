@@ -144,7 +144,7 @@ ESLint statically analyzes your code to quickly find problems.
 
 - [x] Create Legend component (dynamic data)
 
-  - [x] Load json data
+  - [x] Load data
 
   - [x] Create 3 diferent legend item components
 
