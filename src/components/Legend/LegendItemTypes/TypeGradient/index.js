@@ -57,9 +57,9 @@ class TypeGradient extends React.Component {
         <div className="gradient-info-text">
           <Gradient gradient={gradient} items={items}></Gradient>
           <div className="textWrapper">
-            <div onClick={this.handleEdit} className="text-check">
+            <button onClick={this.handleEdit} className="text-check">
               Check the data
-            </div>
+            </button>
           </div>
         </div>
       );
@@ -74,9 +74,9 @@ class TypeGradient extends React.Component {
               className="text-area"
               autoFocus
             />
-            <div onClick={this.handleSave} className="text-check">
+            <button onClick={this.handleSave} className="text-check">
               Save Data
-            </div>
+            </button>
           </div>
         </div>
       );
