@@ -29,11 +29,35 @@
   }
 }
 
-.gradient-info-name {
+.gradient-info-text {
   font: $font-info-style $font-info-weight $font-info-size-md $font-info;
   line-height: $font-info-line-height;
   color: $color-font-info;
   @media (max-width: 768px) {
     font-size: $font-info-size-xs;
   }
+}
+
+.text-box {
+  padding: 10px 0px 0px 0px;
+  textarea {
+    width: 100%;
+  }
+}
+
+.text-area {
+  resize: vertical;
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+}
+
+.text-check {
+  color: $color-font-check;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }

@@ -140,7 +140,7 @@ ESLint statically analyzes your code to quickly find problems.
     - [x] [terser-webpack-plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) for JavaScript
     - [x] [optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin) for CSS
 
-- [ ] Create Legend component (dynamic data)
+- [x] Create Legend component (dynamic data)
 
   - [x] Load json data
 
@@ -148,7 +148,8 @@ ESLint statically analyzes your code to quickly find problems.
 
     - [x] Basic
       - ![basic](src/assets/images/basic.png)
-        - Extra [] - persist text write via placeholder
+        - Extra [ ] - persist text write via placeholder
+  
     - [x] Cloropleth
       - ![choropleth](src/assets/images/choropleth.png)
     - [x] Gradient
@@ -158,11 +159,16 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] Create Toolbar component
   - [x] Create Tooltip component
 
-    - Extra: [ ] create Timeline legend item component
+    - Extra: [x] create Timeline legend item component
 
     - ![timeline](src/assets/images/timeline.png)
 
   - [x] Create Modal Component - Portals
+  
+- [x] Extra goals
+  - [ ] 1. Persist text in first layer
+  - [x] 2. Sorte the layers.
+  - [ ] 3. Timeline  
 
 - [x] Deploy application in GitHub-Pages
 
