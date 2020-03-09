@@ -164,7 +164,7 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] Create Modal Component - Portals
   - [x] HTML to React parser
 
-- [x] Responsive for mobiles
+- [x] Responsive for mobile
 - [x] Extra goals
 
   - [x] 1. Persist text in first layer - Persist text with localstorage.
