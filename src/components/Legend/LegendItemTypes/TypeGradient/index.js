@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Gradient from './gradient';
 import './style.scss';
 
 class TypeGradient extends React.Component {
@@ -7,20 +8,29 @@ class TypeGradient extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+
     this.state = {
-      text: ''
+      text: '',
+      inputText: '',
+      mode: 'view'
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSave = this.handleSave.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-  // on form submit...
-  handleFormSubmit(e) {
-    e.preventDefault();
+  handleChange(e) {
+    this.setState({ inputText: e.target.value });
+  }
+
+  handleSave() {
+    this.setState({ text: this.state.inputText, mode: 'view' });
     localStorage.setItem('document', JSON.stringify(this.state));
+  }
+
+  handleEdit() {
+    this.setState({ mode: 'edit' });
   }
 
   // React Life Cycle
@@ -29,57 +39,48 @@ class TypeGradient extends React.Component {
 
     if (localStorage.getItem('document')) {
       this.setState({
-        text: this.documentData.text
+        inputText: this.documentData.inputText
       });
     } else {
       this.setState({
-        text: ''
+        inputText: ''
       });
     }
   }
 
   render() {
     const { items } = this.props;
-
     const gradient = items.map(item => item.color);
 
-    return (
-      <>
-        <div
-          className="gradient"
-          style={{
-            backgroundImage: `linear-gradient(to right, ${gradient.join(',')})`
-          }}
-        ></div>
-
-        <div className="gradient-info">
-          {items.map(({ name }, index) => (
-            <div key={index} className="gradient-info-range">
-              <div>
-                <div className="gradient-info-text">{name}</div>
-              </div>
-            </div>
-          ))}
-        </div>
+    if (this.state.mode === 'view') {
+      return (
         <div className="gradient-info-text">
-          <div className="text-box">
-            <form onSubmit={this.handleFormSubmit}>
-              <textarea
-                type="text"
-                name="text"
-                className="text-area"
-                value={this.state.text}
-                onChange={this.handleChange}
-              />
-
-              <button type="submit" className="text-check">
-                Check the data
-              </button>
-            </form>
+          <Gradient gradient={gradient} items={items}></Gradient>
+          <div className="textWrapper">
+            <div onClick={this.handleEdit} className="text-check">
+              Check the data
+            </div>
           </div>
         </div>
-      </>
-    );
+      );
+    } else {
+      return (
+        <div className="gradient-info-text text-box">
+          <Gradient gradient={gradient} items={items}></Gradient>
+          <div className="textWrapper">
+            <textarea
+              onChange={this.handleChange}
+              value={this.state.inputText}
+              className="text-area"
+              autoFocus
+            />
+            <div onClick={this.handleSave} className="text-check">
+              Save Data
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 
