@@ -147,9 +147,10 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] Create 3 diferent legend item components
 
     - [x] Basic
+
       - ![basic](src/assets/images/basic.png)
         - Extra [ ] - persist text write via placeholder
-  
+
     - [x] Cloropleth
       - ![choropleth](src/assets/images/choropleth.png)
     - [x] Gradient
@@ -164,11 +165,12 @@ ESLint statically analyzes your code to quickly find problems.
     - ![timeline](src/assets/images/timeline.png)
 
   - [x] Create Modal Component - Portals
-  
+
 - [x] Extra goals
-  - [ ] 1. Persist text in first layer
+
+  - [x] 1. Persist text in first layer - Persiste text in localstorage.
   - [x] 2. Sorte the layers.
-  - [ ] 3. Timeline  
+  - [x] 3. Timeline
 
 - [x] Deploy application in GitHub-Pages
 
