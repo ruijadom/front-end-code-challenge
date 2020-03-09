@@ -177,4 +177,6 @@ ESLint statically analyzes your code to quickly find problems.
 
 ---
 
+Thanks for your time
+
 author: Rui Domingues
