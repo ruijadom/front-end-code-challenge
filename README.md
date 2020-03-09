@@ -162,6 +162,7 @@ ESLint statically analyzes your code to quickly find problems.
   - [x] Create Tooltip component
 
   - [x] Create Modal Component - Portals
+  - [x] HTML to React parser
 
 - [x] Extra goals
 
