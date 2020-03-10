@@ -26,7 +26,8 @@ class Legend extends Component {
   async componentDidMount() {
     await import('../data')
       .then(data => {
-        this.setState({ legends: data.default, isLoading: false });
+        const layers = data.default.filter(l => l.type !== 'timeline');
+        this.setState({ legends: layers, isLoading: false });
       })
       .catch(err => console.error(err));
   }

@@ -169,8 +169,6 @@ ESLint statically analyzes your code to quickly find problems.
 
   - [x] 1. Persist text in first layer - Persist text with localstorage.
   - [x] 2. Sorte the layers.
-  - [x] 3. Timeline - need more time to finished
-    - ![timeline](src/assets/images/timeline.png)
 
 - [x] Deploy application in GitHub-Pages
 

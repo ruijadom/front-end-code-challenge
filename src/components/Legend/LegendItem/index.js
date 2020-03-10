@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Drag from './../Drag';
 import Toolbar from './../Toolbar';
-import { TypeBasic, TypeTimeline, TypeGradient, TypeCloropleth } from '../LegendItemTypes';
+import { TypeBasic, TypeGradient, TypeCloropleth } from '../LegendItemTypes';
 import Modal from './../../Common/Modal';
 import './styles.scss';
 
 const BASIC = 'basic';
 const CHOROPLETH = 'choropleth';
 const GRADIENT = 'gradient';
-const TIMELINE = 'timeline';
 
 class LegendItem extends Component {
   state = {
@@ -38,7 +37,7 @@ class LegendItem extends Component {
   };
 
   renderContent() {
-    const { type, items, timeline } = this.props;
+    const { type, items } = this.props;
 
     switch (type) {
       case BASIC:
@@ -47,8 +46,6 @@ class LegendItem extends Component {
         return <TypeCloropleth items={items} />;
       case GRADIENT:
         return <TypeGradient items={items} />;
-      case TIMELINE:
-        return <TypeTimeline timeline={timeline} />;
       default:
         return null;
     }
