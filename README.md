@@ -168,7 +168,7 @@ ESLint statically analyzes your code to quickly find problems.
 - [x] Extra goals
 
   - [x] 1. Persist text in first layer - Persist text with localstorage.
-  - [x] 2. Sorte the layers.
+  - [x] 2. Sort the layers.
 
 - [x] Deploy application in GitHub-Pages
 
